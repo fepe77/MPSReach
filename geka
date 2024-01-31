@@ -1,0 +1,22 @@
+If game.PlaceId == 427982975 or not game.PlaceId == 496735712 then
+     local m = Instance.new(“Message”, workspace)
+     m.Text = “Hi ”..game.Players.LocalPlayer.Name..“, Unfortunately, this script is patched. But it still works perfectly on Legendary Football Practice Place. Try it out!”
+wait(20)
+     m:Remove()
+elseif game.PlaceId == 496735712 then
+ 
+while wait(0.0) do
+football = game.Workspace:WaitForChild("Football")
+hum = game.Players.LocalPlayer.Character.HumanoidRootPart
+magnitude = (football.position-hum.position).magnitude
+i = 0
+print(magnitude)
+if (magnitude <= 999) and (i < 1) then
+football.CFrame = CFrame.new(hum.Position)
+i = i + 1
+wait(0.0)
+i = i - 1
+end
+end
+ 
+end
